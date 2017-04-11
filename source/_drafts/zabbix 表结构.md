@@ -1,0 +1,48 @@
+
+```
++--------------------+---------------------+------+-----+---------+-------+
+| Field              | Type                | Null | Key | Default | Extra |
++--------------------+---------------------+------+-----+---------+-------+
+| hostid             | bigint(20) unsigned | NO   | PRI | NULL    |       |
+| proxy_hostid       | bigint(20) unsigned | YES  | MUL | NULL    |       |
+| host               | varchar(128)        | NO   | MUL |         |       |
+| status             | int(11)             | NO   | MUL | 0       |       |
+| disable_until      | int(11)             | NO   |     | 0       |       |
+| error              | varchar(2048)       | NO   |     |         |       |
+| available          | int(11)             | NO   |     | 0       |       |
+| errors_from        | int(11)             | NO   |     | 0       |       |
+| lastaccess         | int(11)             | NO   |     | 0       |       |
+| ipmi_authtype      | int(11)             | NO   |     | 0       |       |
+| ipmi_privilege     | int(11)             | NO   |     | 2       |       |
+| ipmi_username      | varchar(16)         | NO   |     |         |       |
+| ipmi_password      | varchar(20)         | NO   |     |         |       |
+| ipmi_disable_until | int(11)             | NO   |     | 0       |       |
+| ipmi_available     | int(11)             | NO   |     | 0       |       |
+| snmp_disable_until | int(11)             | NO   |     | 0       |       |
+| snmp_available     | int(11)             | NO   |     | 0       |       |
+| maintenanceid      | bigint(20) unsigned | YES  | MUL | NULL    |       |
+| maintenance_status | int(11)             | NO   |     | 0       |       |
+| maintenance_type   | int(11)             | NO   |     | 0       |       |
+| maintenance_from   | int(11)             | NO   |     | 0       |       |
+| ipmi_errors_from   | int(11)             | NO   |     | 0       |       |
+| snmp_errors_from   | int(11)             | NO   |     | 0       |       |
+| ipmi_error         | varchar(2048)       | NO   |     |         |       |
+| snmp_error         | varchar(2048)       | NO   |     |         |       |
+| jmx_disable_until  | int(11)             | NO   |     | 0       |       |
+| jmx_available      | int(11)             | NO   |     | 0       |       |
+| jmx_errors_from    | int(11)             | NO   |     | 0       |       |
+| jmx_error          | varchar(2048)       | NO   |     |         |       |
+| name               | varchar(128)        | NO   | MUL |         |       |
+| flags              | int(11)             | NO   |     | 0       |       |
+| templateid         | bigint(20) unsigned | YES  | MUL | NULL    |       |
+| description        | text                | NO   |     | NULL    |       |
+| tls_connect        | int(11)             | NO   |     | 1       |       |
+| tls_accept         | int(11)             | NO   |     | 1       |       |
+| tls_issuer         | varchar(1024)       | NO   |     |         |       |
+| tls_subject        | varchar(1024)       | NO   |     |         |       |
+| tls_psk_identity   | varchar(128)        | NO   |     |         |       |
+| tls_psk            | varchar(512)        | NO   |     |         |       |
++--------------------+---------------------+------+-----+---------+-------+
+
+
+```
