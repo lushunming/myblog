@@ -69,11 +69,9 @@ theme: indigo
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
 - type: git 
-  repo: git@git.coding.net:lushunming/lushunming.git
-  branch: coding-pages
+  repo: 
+         coding: git@git.coding.net:lushunming/lushunming.git,coding-pages
+         github: git@github.com:lushunming/lushunming.github.io.git,master
   message: 新的提交
-- type: git 
-  repo: git@github.com:lushunming/lushunming.github.io.git
-  branch: master
-  message: 新的提交
+  
 
