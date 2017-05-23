@@ -6,7 +6,7 @@ tagline:
 image: 
 date: 2016/03/1
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
 # knockoutjs一 关于knockoutjs
 =============

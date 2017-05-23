@@ -6,7 +6,7 @@ tagline:
 image: 
 date: 2016/03/3
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
 # knockoutjs三  text和apperance的绑定
 

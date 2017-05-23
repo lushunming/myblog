@@ -6,7 +6,7 @@ tagline:
 image: 
 date: 2016/03/13
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
 # knockoutjs十三  focus checked绑定
 

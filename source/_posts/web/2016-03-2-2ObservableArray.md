@@ -6,7 +6,7 @@ tagline:
 image: 
 date: 2016/03/2
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
 # knockoutjs二   observableArray的使用
 
