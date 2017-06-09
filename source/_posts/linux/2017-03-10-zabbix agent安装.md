@@ -36,7 +36,7 @@ windows服务器
     Hostname=101.37.27.100 windows
 
     ```
-    *  Server是填写zabbix服务的ip
+    * Server是填写zabbix服务的ip
     * ServerActive也是填zabbix服务的ip，这是用来检测agent是否活跃的，不配置服务端就检测不到
     * Hostname 是agent的名字，需要全局唯一，和监控添加的hostName要一样的。
     
@@ -50,5 +50,3 @@ windows服务器
 3. 监控
 
     在frontend配置一个host,主机名和agent配置文件中的一样，填写agent的ip和端口（默认10050，如果修改了请自己修改）。链接windows server 模板，一会就会看到`ZBX`变绿了，就说明监控成功了。
-    
-    

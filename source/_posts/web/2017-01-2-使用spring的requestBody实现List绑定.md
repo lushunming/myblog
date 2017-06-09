@@ -8,7 +8,7 @@ date: 2017/1/2
 categories: [web]
 tags: [java]
 ---
-#使用spring的requestBody实现List绑定
+# 使用spring的requestBody实现List绑定
 
 
 最近有很多一对多关系的表单需要保存，比如一个人有好几本书，他会在一个表单提交所有的数据，我的后台参数需要绑定一个`List`。

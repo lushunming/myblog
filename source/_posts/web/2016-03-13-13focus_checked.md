@@ -6,9 +6,9 @@ tagline:
 image: 
 date: 2016/03/13
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
-#knockoutjs十三  focus checked绑定
+# knockoutjs十三  focus checked绑定
 
 
 毕设加上班有点忙，不好意思，今天讲解的时focus和checked绑定，好久没去官网看看，发现他们已经更新了不少东西，这些我以前都没有用过，就找个官方的例子讲解一下。

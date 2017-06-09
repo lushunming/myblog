@@ -6,9 +6,9 @@ tagline:
 image: 
 date: 2016/03/3
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
-#knockoutjs三  text和apperance的绑定
+# knockoutjs三  text和apperance的绑定
 
  由于换了工作，要熟悉新的工作环境，所以没有什么时间做自己的事情，今天开始重新开始继续下面的文章，争取尽早写完
  

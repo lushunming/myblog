@@ -6,9 +6,9 @@ tagline:
 image: 
 date: 2016/03/2
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
-#knockoutjs二   observableArray的使用
+# knockoutjs二   observableArray的使用
 
  上次忘记讲了，viewmodel可以有好几仲形式。
 1.`var viewModel={}` 这样写对应的绑定为	`ko.applyBindings(viewModel);`

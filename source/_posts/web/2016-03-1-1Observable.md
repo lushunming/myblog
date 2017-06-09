@@ -6,9 +6,9 @@ tagline:
 image: 
 date: 2016/03/1
 categories: [web]
-tags: [javascript]
+tags: [javascript,knockoutjs]
 ---
-#knockoutjs一 关于knockoutjs
+# knockoutjs一 关于knockoutjs
 =============
  实习期间，我们公司用的前端框架是knockoutjs，这是一种MVVM的框架。在使用的时候，发现中国关于它的资料很少。所以想写点关于它的文章。
 
