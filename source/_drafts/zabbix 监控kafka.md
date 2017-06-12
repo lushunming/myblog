@@ -1,7 +1,7 @@
 ---
 layout: post
-title: zabbix 监控windows下kafka
-description: zabbix 监控windows下kafka
+title: zabbix 监控kafka
+description: zabbix 监控kafka
 tagline:
 image:
 date: 2017/06/09
@@ -9,7 +9,7 @@ categories: [linux]
 tags: [linux,zabbix,kafka]
 ---
 
-# zabbix 监控windows下kafka
+# zabbix 监控kafka
 
 zabbix 监控kafka主要使用的是zabbix的java gateway。
 
@@ -34,10 +34,9 @@ zabbix 监控kafka主要使用的是zabbix的java gateway。
     service zabbix-java-gateway start
     service zabbix-server restart
     ```
-
 2. 设置kafka，开启jmx。
 
-    在`bin\windows`下找到kafka-server-start.bat文件，在
+    windows下在`bin\windows`下找到kafka-server-start.bat文件，在
     ```
     IF ["%KAFKA_HEAP_OPTS%"] EQU [""] (
     set KAFKA_HEAP_OPTS=-Xmx1G -Xms1G
@@ -53,8 +52,20 @@ zabbix 监控kafka主要使用的是zabbix的java gateway。
     )
     ```
 
-
-3. 配置主机
+    linux下在`bin\`下找到`/kafka-server-start.sh`文件，在
+    ```
+    if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
+    export KAFKA_HEAP_OPTS="-Xmx1G -Xms1G"
+    fi
+    ```
+    下加上`export JMX_PORT=9999`变为
+    ```
+    if [ "x$KAFKA_HEAP_OPTS" = "x" ]; then
+    export KAFKA_HEAP_OPTS="-Xmx1G -Xms1G"
+    export JMX_PORT=9999
+    fi
+    ```
+3.  配置主机
     ![jmx端口配置](http://img.blog.csdn.net/20170609162931573?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamhmc2Rmcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
     jmx的端口一定要与JMX_PORT一样。
     链接[`Kafka`模板](https://raw.githubusercontent.com/lushunming/zabbix_file/master/kafka/zbx_kafka_templates.xml)。
