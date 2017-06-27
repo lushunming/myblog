@@ -2,8 +2,8 @@
 layout: post
 title: zabbix 监控mongodb
 description: zabbix 监控mongodb
-tagline: 
-image: 
+tagline:
+image:
 date: 2017/04/16
 categories: [linux]
 tags: [linux,zabbix,mongodb,windows]
@@ -20,17 +20,17 @@ Linux服务器
     ```
     #!/bin/bash
     index=$(echo $@ | tr " " ".")
-
-    status=$(echo "db.serverStatus().${index}" |/usr/local/mongodb/bin/mongo   admin |sed -n '3p')
-
+    status=$(echo "db.serverStatus().${index}" |/usr/bin/mongo  --quiet admin)
     #check if the output contains "NumberLong"
-    if [[ "$status" =~ "NumberLong"   ]];then
-            echo $status|sed -n 's/NumberLong(//p'|sed -n 's/)//p'
+    if [[ "$status" =~ "NumberLong" ]];then
+                echo $status|sed -n 's/NumberLong(//p'|sed -n 's/)//p'
     else
-            echo $status
+                echo $status
     fi
 
     ```
+    `/usr/bin/mongo` 这个是mongo的路径 admin是数据库，如果有用户和密码，那么也要在后面加上。
+       
     * 新建一个[mongodb.conf](https://raw.githubusercontent.com/lushunming/zabbix_file/master/mongodb/zabbix_agentd.conf.d/mongodb.conf)文件
     ```
     UserParameter=mongodb.status[*],/etc/zabbix/script/mongodb.sh $1 $2 $3 $4 $5
@@ -38,7 +38,7 @@ Linux服务器
      放到`zabbix_agentd.conf.d`目录下
 
 2. 监控
-    
+
     在frontend中导入模板[zbx_mongodb_templates.xml](https://raw.githubusercontent.com/lushunming/zabbix_file/master/mongodb/template/zbx_mongodb_templates.xml) 内容如下：
     ```
         <?xml version="1.0" encoding="UTF-8"?>
@@ -3014,4 +3014,3 @@ Linux服务器
 
     ```
     新建一个host，链接到这个模板就可以了。
-
