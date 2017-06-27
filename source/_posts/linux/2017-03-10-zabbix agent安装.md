@@ -2,8 +2,8 @@
 layout: post
 title: zabbix agent 安装
 description: zabbix agent 安装
-tagline: 
-image: 
+tagline:
+image:
 date: 2017/03/10
 categories: [linux]
 tags: [linux,zabbix,zabbix agent]
@@ -39,9 +39,9 @@ windows服务器
     * Server是填写zabbix服务的ip
     * ServerActive也是填zabbix服务的ip，这是用来检测agent是否活跃的，不配置服务端就检测不到
     * Hostname 是agent的名字，需要全局唯一，和监控添加的hostName要一样的。
-    
-    然后用命令安装
-    
+
+    然后以**管理员身份运行**用命令安装
+
     ```
     C:\zabbix\bin\win64\zabbix_agentd.exe -c C:\zabbix\conf\zabbix_agentd.win.conf  --install
     ```
