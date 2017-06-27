@@ -2,14 +2,14 @@
 layout: post
 title: zabbix 监控windows下tomcat
 description: zabbix 监控windows下tomcat
-tagline: 
-image: 
+tagline:
+image:
 date: 2017/04/16
 categories: [linux]
 tags: [linux,windows,zabbix,tocmat]
 ---
 
-# zabbix 监控windows下tomcat 
+# zabbix 监控windows下tomcat
 
 zabbix 监控tomcat主要使用的是zabbix的java gateway。
 
@@ -40,7 +40,7 @@ zabbix 监控tomcat主要使用的是zabbix的java gateway。
     在`tomcat/bin`下找到catalina.bat文件，在`set "CURRENT_DIR=%cd%"`下加上
 
     ```
-    set JAVA_OPTS=-Dcom.sun.management.jmxremote.port=12345 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false
+  set JAVA_OPTS=-Dcom.sun.management.jmxremote.port=12345 -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false  -Djava.rmi.server.hostname=tomcat部署的服务器ip -Dcom.sun.management.jmxremote.rmi.port=12345
     ```
 3. 下载支持`jmx` 的jar包`catalina-jmx-remote.jar`,把他放到tocmat目录下的`lib`包中。
 
@@ -48,6 +48,3 @@ zabbix 监控tomcat主要使用的是zabbix的java gateway。
     ![jmx端口配置](http://img.blog.csdn.net/20170324115028226?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvamhmc2Rmcw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
     jmx的端口一定要与在`catalina.bat`下配置的`jmxremote.port`一样。
     链接`Template JMX Generic`和`Template JMX Tomcat`这两个模板。
-
-
-
