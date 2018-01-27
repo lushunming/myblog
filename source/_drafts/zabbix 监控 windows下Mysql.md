@@ -2,8 +2,8 @@
 layout: post
 title: zabbix 监控 windows下Mysql
 description: zabbix 监控 windows下Mysql
-tagline: 
-image: 
+tagline:
+image:
 date: 2017/03/06
 categories: [linux]
 tags: [linux,zabbix,Mysql]
@@ -51,7 +51,7 @@ windows服务器
      Arg = objArgs(0)
      str2 = Split(str1,"|")
      For i = LBound(str2) to UBound(str2)
-     If Trim(str2(i)) = Arg Then 
+     If Trim(str2(i)) = Arg Then
      WScript.Echo TRIM(str2(i+1))
      Exit For
      End If
@@ -98,7 +98,7 @@ windows服务器
     * UnsafeUserParameters是允许参数中包含一个特殊字符，自定义脚本中往往都有，所以要设置为1
     * UserParameter增加监控项，我们是调用前面的脚本监控。
 3. 导入模板
-    
+
     导入监控模板
     ```
         <?xml version="1.0" encoding="UTF-8"?>
@@ -966,4 +966,3 @@ windows服务器
 
 4. 监控
     新建一个主机，链接导入的模板就可以了。
-    
