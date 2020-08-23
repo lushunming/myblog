@@ -71,7 +71,6 @@ deploy:
 - type: git 
   repo:
          gitee: git@gitee.com:shunming/shunming.git,master
-         coding: git@git.coding.net:lushunming/lushunming.git,coding-pages
          github: git@github.com:lushunming/lushunming.github.io.git,master
   message: 新的提交
   
