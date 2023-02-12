@@ -15,6 +15,7 @@ timezone: Asia/Shanghai
 url: http://www.lushunming.com.cn
 root: /
 permalink: :year/:month/:day/:title/
+
 permalink_defaults:
 
 # Directory
